@@ -1,13 +1,26 @@
+import { useState } from 'react'
 import React from 'react'
 import Graph from '../components/Graph'
+import Sidebar from '../components/Sidebar'
+import Header from '../components/Header'
 
 
 const Dashboard = () => {
+
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
+
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle)
+  }
+  
   return (
-    <div className='flex flex-col items-center h-full justify-center text-white text-3xl'>
-      Welcome to StudyNotion!!
-      <Graph/>
+    <div className='grid-container'>
+      
+      <Header OpenSidebar={OpenSidebar}/>
+      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+      <Graph />
     </div>
+    
     
     
   )
