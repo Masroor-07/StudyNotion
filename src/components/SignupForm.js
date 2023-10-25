@@ -60,7 +60,7 @@ const SignupForm = ({setIsLoggedIn}) => {
     <div>
         {/* student-Instructor tab */}
         <div
-        className='flex bg-richblack-800 p-1 gap-x-1 my-6 rounded-full max-w-max'>
+        className='flex bg-richblack-800 p-1 gap-x-1 my-4 rounded-full max-w-max'>
 
             <button
             className={`${accountType === "student" 
@@ -83,8 +83,8 @@ const SignupForm = ({setIsLoggedIn}) => {
 
         <form onSubmit={submitHandler} >
         {/* first name and lastName */}
-            <div className='flex gap-x-4 mt-[20px]'>
-                    <label className='w-full'>
+            <div className='flex   gap-4 w-full '>
+                    <label className='w-1/2 '>
                         <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>First Name<sup className='text-pink-200'>*</sup></p>
                         <input
                             required
@@ -97,7 +97,7 @@ const SignupForm = ({setIsLoggedIn}) => {
                         />
                     </label>
 
-                    <label className='w-full'>
+                    <label className='w-1/2'>
                         <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Last Name<sup className='text-pink-200'>*</sup></p>
                         <input
                             required
@@ -111,8 +111,8 @@ const SignupForm = ({setIsLoggedIn}) => {
                     </label>
             </div>
             {/* email Add */}
-            <div className='mt-[20px]'>
-            <label className='w-full mt-[20px]'>
+            <div className='w-full mt-4'>
+            <label className='w-full '>
                     <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Email Address<sup className='text-pink-200'>*</sup></p>
                     <input
                         required
@@ -128,8 +128,8 @@ const SignupForm = ({setIsLoggedIn}) => {
             
 
             {/* createPassword and Confirm Password */}
-            <div className='w-full flex gap-x-4 mt-[20px]'>
-                <label className='w-full relative'>
+            <div className='flex  gap-4 mt-[10px]'>
+                <label className='w-1/2 relative'>
                     <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Create Password<sup className='text-pink-200'>*</sup></p>
                     <input
                         required
@@ -151,7 +151,7 @@ const SignupForm = ({setIsLoggedIn}) => {
                     </span>
                 </label>
 
-                <label className='w-full relative'>
+                <label className='w-1/2 relative'>
                     <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Confirm Password<sup className='text-pink-200'>*</sup></p>
                     <input
                         required

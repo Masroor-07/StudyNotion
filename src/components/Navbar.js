@@ -2,6 +2,7 @@ import React from 'react'
 import logo from "../assets/Logo.svg"
 import {Link} from "react-router-dom"
 import {toast} from "react-hot-toast"
+import {BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle} from 'react-icons/bs'
 
 
 const Navbar = (props) => {
@@ -69,6 +70,13 @@ const Navbar = (props) => {
                 </Link>
             }
         </div>
+        <div className='navbar-right gap-3'>
+            <BsFillBellFill className='icon'/>
+            <BsFillEnvelopeFill className='icon'/>
+            <BsPersonCircle className='icon'/>
+        </div>
+
+
       
     </div>
   )

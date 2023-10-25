@@ -1,9 +1,10 @@
 import React from 'react'
 import 
-{FaDiscourse,FaJava,FaPython,FaNetworkWired,FaAssistiveListeningSystems}
+{FaDiscourse,FaJava,FaPython,FaNetworkWired,FaAssistiveListeningSystems,FaReact}
  from 'react-icons/fa'
-import {DiJavascript1}from 'react-icons/di'
-import {AiFillSetting,AiFillDatabase}from 'react-icons/ai'
+import {DiJavascript}from 'react-icons/di'
+import {AiFillSetting,AiFillDatabase,AiFillProject}from 'react-icons/ai'
+import './Sidebar.css';
 
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
@@ -13,23 +14,25 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
             <div className='sidebar-brand'>
                 <FaDiscourse  className='icon_header'/> Courses
             </div>
-            <span className='icon close_icon' onClick={OpenSidebar}>X</span>
+            
         </div>
 
         <ul className='sidebar-list'>
             <li className='sidebar-list-item'>
+            <a href="">
+                <FaJava className='icon'/>
+                </a>
+                 Java 
+                  
+            </li>
+            <li className='sidebar-list-item'>
                 <a href="">
-                    <FaJava className='icon'/> Java
+                    <DiJavascript className='icon'/> JS
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <DiJavascript1 className='icon'/> JS
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <FaPython className='icon'/> Python
+                <FaPython className='icon'/>Python 
                 </a>
             </li>
             <li className='sidebar-list-item'>
@@ -49,10 +52,21 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
+                    <FaReact className='icon'/> React
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <AiFillProject className='icon'/> Project
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
                     <AiFillSetting className='icon'/> Setting
                 </a>
             </li>
         </ul>
+        <div className='sidebar-content-filler'></div>
     </aside>
   )
 }
